@@ -1,69 +1,110 @@
 body{
     background-color:#e7a9d3;
     font-family: sans-serif;
+}
+
+* {
+    padding: 0;
     margin: 0;
-    
-}
-#main-container{
-    padding-top: 0px;
-    text-align: center;
-}
-
-.btn{
-text-decoration: none;
-border-radius: 20px;
-padding: 11.5px 15px;
-display: inline-block;
-text-shadow: 0 1px 0 rgba(165, 122, 194, 0.726);
-box-shadow: 0 1px 1px rgba(111, 74, 153, 0.842);
-}
-
-.btn-green{
-background-color: #82649e;
-}
-.btn-green:hover{
-    background-color: #654d7c;
-}
-.btn-green:active{
-    background-color: #5a4470;
-}
-
-.text{
-    text-align: left;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    height: 55px;
-    background-color: #72578d;
-    align-items: center;
-    padding: 10px;
-}
-nav{
-    text-align: left;
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-    background-color: #82649e;
+    box-sizing: border-box;
 }
 
 a{
     text-decoration: none;
+    color: white;
 }
 
-nav a{
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1250px;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #72578d;
+    height: 55px;
+    padding: 2.1em 0;
+}
+
+.header_items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 0.5em;
+}
+
+.header_title:hover {
+    background-color: #82649e;
+    border-radius: 10px;
+}
+
+.header_links {
+    display: flex;
+    padding: 0;
+}
+
+.header_links li {
+    list-style: none;
+    margin-right: 1em;
+}
+
+.link {
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 11.5px 15px;
+    display: inline-block;
+    text-shadow: 0 1px 0 rgba(165, 122, 194, 0.726);
+    box-shadow: 0 1px 1px rgba(111, 74, 153, 0.842);
+    padding: 0.5em 1em;
+    background-color: #9f7cc0;
+    border-radius: 10px;
+    text-transform: uppercase;
     font-weight: 600;
-    padding-right: 10px;
 }
 
-nav a:hover{
-    color: #3b1d58;
+.link:hover {
+    background-color: #82649e;
 }
 
+.button {
+    margin-left: 0.2em;
+    padding: 0.5em 1em;
+    border: 3px solid #82649e;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: ease 0.3s;
+}
 
+.button:hover {
+    background-color: #82649e;
+    color: #c69cee;
+} 
+
+/* SECTIONS */
+
+.section {
+    margin-top: 1.5em;
+}
+
+.section h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.section h2 {
+    text-align: center;
+}
 
 @media (max-width:700px){
     header{
@@ -74,3 +115,4 @@ nav a:hover{
         padding: 10px 0px;
     }
 } 
+
