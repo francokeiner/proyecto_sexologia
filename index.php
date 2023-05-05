@@ -1,3 +1,21 @@
+<?php 
+session_start();
+
+require_once('conexion.php');
+$isLogged = false;
+$name = '';
+
+// echo $_SESSION['id'];
+
+if ($_SESSION['id']) {
+    $name =  mysqli_fetch_array(mysqli_query(conectar(), "
+        SELECT name FROM user WHERE user_id = $_SESSION[id];
+    "))['name'];
+    $isLogged = true;
+}
+
+mysqli_close(conectar());
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +31,12 @@
     <?php require_once('./components/header.php') ?>
     <div class="container">
         <section class="section">
-            <h1>Educa tu cuerpo</h1>
-
-            <h2>Introduccion</h2>
+            <?php if($isLogged): ?>
+                <h1>BIENVENIDO ¡<?= $name ?>!</h1>
+            <?php else: ?>
+                <h1>Educa tu cuerpo</h1>
+                <h2>Introduccion</h2>
+            <?php endif ?>
         </section>
     </div>
 </body>

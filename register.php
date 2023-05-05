@@ -1,12 +1,24 @@
 <?php
 require_once('./conexion.php');
+$inequalPasswords = false;
 
 if ($_POST) {
     $name = mysqli_real_escape_string(conectar(),$_POST['name']);
     $email = mysqli_real_escape_string(conectar(), $_POST['email']);
     $password = mysqli_real_escape_string(conectar(), $_POST['password']);
-    $finalPassword = password_hash($password, PASSWORD_BCRYPT);
+    $confirmPassword = mysqli_real_escape_string(conectar(), $_POST['confirm_password']);
+    $passwordHashed = password_hash($password, PASSWORD_BCRYPT);
     
+    if ($password !== $confirmPassword) {
+        $inequalPasswords = true;
+    }
+    else {
+        mysqli_query(conectar(), "
+            INSERT INTO user(name, email, password) VALUES ('$name', '$email', '$passwordHashed');
+        ");
+        header('location:./login.php');
+    }
+
     mysqli_close(conectar());
 }
 ?>
@@ -38,7 +50,7 @@ if ($_POST) {
                 <div class="caja__trasera-register">
                     <h3>¿Ya tienes una cuenta?</h3>
                     <p>Ingresa sesión desde aqui.</p>
-                    <button id="btn__registrarse">Iniciar Sesión</button>
+                    <button id="btn__registrarse"><a href="./login.php">Iniciar Sesión</a></button>
                 </div>
             </div>
 
@@ -50,6 +62,7 @@ if ($_POST) {
                     <input required name="email" type="email" placeholder="Correo Electronico">
                     <input required name="password" type="password" placeholder="Contraseña">
                     <input required name="confirm_password"type="password" placeholder="Confirmar Contraseña">
+                    <?= $inequalPasswords ? '<span style="color:red;">Las contraseñas no coincideden</span>' : null ?>
                     <button id="btn" type="submit">Registrarse</button>
                 </form>
             </div>
@@ -58,7 +71,6 @@ if ($_POST) {
     </main>
 
     <script src="estructura.js"></script>
-    <script src="passwordVerify.js"></script>
 </body>
 
 </html>
