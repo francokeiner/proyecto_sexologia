@@ -1,7 +1,7 @@
 <header class="header">
     <div class="container">
         <div class="header_items">
-            <a class="header_title" href="./">Educa tu cuerpo</a>
+            <a class="header_title" href=<?= $index??"./" ?>>Educa tu cuerpo</a>
             <nav>
                 <ul class="header_links">
                     <li><a href=<?= $inicio??"./views/inicio.php" ?> class="link">Inicio</a></li>

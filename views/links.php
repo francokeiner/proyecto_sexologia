@@ -5,3 +5,4 @@ $contacto = './contacto.php';
 $contenido = './contenido.php';
 $register = '../register.php';
 $login = '../login.php';
+$index = '../';
