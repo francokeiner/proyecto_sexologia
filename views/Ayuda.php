@@ -2,6 +2,7 @@
 require_once('./links.php');
 error_reporting(0);
 ini_set('display_errors', 0);
+$inico = '#';
 ?>
 
 <!DOCTYPE html>
@@ -20,29 +21,27 @@ ini_set('display_errors', 0);
     <?php require_once('../components/header.php') ?>
     <div class="container">
         <div class="container_content">
-            <div class="content">
-                <div class="aside_content">
-                    <aside class="aside">
-                        <ul class="lista">
-                            <li><a href="">Autoconcepto</a></li>
-                            <li><a href="">Autoestima</a></li>
-                            <li><a href="">Relaciones interpersonales</a></li>
-                            <li><a href="">Preferencia Sexual</a></li>
-                            <li><a href="">Orientación Sexual (tipos)</a></li>
-                            <li><a href="">Género</a></li>
-                            <li><a href="">Tipos de sexo (fálico, anal, vaginal)</a></li>
-                        </ul>
-                    </aside>
-                </div>
-                <main class="main_Content">
-                    <p>
-                    </p>
-                </main>
+        <div class="content">
+            <div class="aside_content">
+                <aside class="aside">
+                    <ul class="lista">
+                        <li><a href="">Autoconcepto</a></li>
+                        <li><a href="">Autoestima</a></li>
+                        <li><a href="">Relaciones interpersonales</a></li>
+                        <li><a href="">Preferencia Sexual</a></li>
+                        <li><a href="">Orientación Sexual (tipos)</a></li>
+                        <li><a href="">Género</a></li>
+                        <li><a href="">Tipos de sexo (fálico, anal, vaginal)</a></li>
+                    </ul>
+                </aside>
             </div>
+            <main class="main_Content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi dolores eos blanditiis autem aliquam necessitatibus asperiores aut obcaecati eum consectetur ipsa delectus pariatur exercitationem dicta, dolore optio fugit veniam.
+                    Magni architecto possimus consequuntur non modi illo, nihil reiciendis ullam voluptas, quidem iusto expedita ea enim labore placeat dolorem saepe sed eum autem. Aperiam beatae aliquam ipsam, necessitatibus officia ipsa?
+                </p>
+            </main>
         </div>
-    </div>
-
-    <footer id="footer">
+        <footer id="footer">
         <div class="contenedor footer-content">
             <div class="contact-us">
                 <h2 class="brand">EDUCA TU CUERPO</h2>

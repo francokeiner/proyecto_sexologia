@@ -1,6 +1,6 @@
 body{
-    background: rgb(204,65,197);
-    background: linear-gradient(90deg, rgba(204,65,197,1) 32%, rgba(72,198,191,1) 77%);
+    background: rgb(13,6,62);
+background: linear-gradient(90deg, rgba(13,6,62,1) 0%, rgba(58,103,223,1) 100%);
     font-family: sans-serif;
 }
 
@@ -26,7 +26,7 @@ a{
 .header {
     display: flex;
     align-items: center;
-    background-color: #3e5a7a;
+    background-color: #1f1075;
     height: 55px;
     padding: 2.1em 0;
 }
@@ -45,8 +45,8 @@ a{
 }
 
 .header_title:hover {
-    background-color: #6992d1;
-    border-radius: 10px;
+    background-color: #151b6d;
+    
 }
 
 .header_links {
@@ -61,35 +61,31 @@ a{
 
 .link {
     text-decoration: none;
-    border-radius: 20px;
     padding: 11.5px 15px;
     display: inline-block;
-    text-shadow: 0 1px 0 rgba(104, 150, 236, 0.726);
-    box-shadow: 0 1px 1px rgba(49, 78, 95, 0.842);
+    text-shadow: 0 1px 0 rgba(21, 22, 121, 0.644);
+    box-shadow: 0 1px 1px rgba(30, 23, 129, 0.76);
     padding: 0.5em 1em;
-    background-color: #6f97ca;
-    border-radius: 10px;
+    background-color: #171f66;
     text-transform: uppercase;
     font-weight: 600;
 }
 
 .link:hover {
-    background-color: #385685;
+    background-color: #201583dc;
 }
 
 .button {
     margin-left: 0.2em;
     padding: 0.5em 1em;
-    border: 3px solid #6c8dc0;
     text-transform: uppercase;
-    border-radius: 10px;
     font-weight: bold;
     transition: ease 0.3s;
 }
 
 .button:hover {
-    background-color: #7089cc;
-    color: #88a6df;
+    background-color: #1f1485a6;
+    color: #14218fea;
 } 
 
 /* SECTIONS */
@@ -107,13 +103,65 @@ a{
     text-align: center;
 }
 
-@media (max-width:700px){
-    header{
-        flex-direction: column;
-    }  
+footer{
+    background: #212c75;
+    padding-bottom: 0.1px;
+}
 
-    nav{
-        padding: 10px 0px;
-    }
-} 
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
 
+
+.contact-us{
+    width: 40%;
+    color: #fff;
+}
+
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.brand+p{
+    font-weight: 500;
+}
+
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 60px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    color: #fff;
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+.social-media-icon:hover{
+    background: #fff;
+    color:#764ba2;
+}
